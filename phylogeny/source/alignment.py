@@ -44,27 +44,3 @@ def align_sequences(input_file, output_file):
 	print(f"Aligned sequences: {len(alignment)}")
 	print(f"Alignment length: {next(iter(lengths))} positions")
 	print(f"Saved alignment to: {output_file}")
-
-def main():
-	parser = argparse.ArgumentParser(description = "Align sequences with MAFFT")
-	parser.add_argument("input", help = "Input FASTA file")
-	parser.add_argument("-o", "--output", help = "Output FASTA file")
-
-	args = parser.parse_args()
-
-	input_path = Path(args.input)
-	project_root = Path(__file__).resolve().parents[1]
-
-	output_path = (Path(args.output)
-	if args.output
-	else project_root / "results" / f"{input_path.stem}_aligned.fasta"
-	)
-
-	try:
-		align_sequences(input_path, output_path)
-	except (FileNotFoundError, ValueError, subprocess.CalledProcessError) as error:
-		print(f"Error: {error}")
-		raise SystemExit(1)
-
-if __name__ == "__main__":
-	main()
