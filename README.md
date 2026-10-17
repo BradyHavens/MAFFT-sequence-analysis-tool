@@ -9,6 +9,7 @@ This project is provides a basic workflow for aligning sequence data found in FA
 -Accepts FASTA sequence data
 -Uses MAFFT to align sequences
 -Produces aligned sequence files in FASTA format
+-uses aligned sequences to produce a .nwk file containing a dendrogram of sequence similarity.
 
 ## Requirements (Other versions may work, these were used for development)
 Python 3.14.4
@@ -17,8 +18,7 @@ MAFFT v7.525
 
 ## Usage
 In terminal, run:
-python source/alignment.py path/yourFASTAfile.fasta
+python phylogeny/source/alignment.py path/yourFASTAfile.fasta
 
 ## Acknowledgements
-
 This projects relies of MAFFT, developed by its own authors. Refer to the MAFFT project for its documentation and Liscence.
