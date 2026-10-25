@@ -3,7 +3,7 @@
 A python script for performing multiple sequence alignment (MSA) on biological sequences from FASTA files using MAFFT.
 
 ## OVERVIEW
-This project is provides a basic workflow for aligning sequence data found in FASTA files using MAFFT. This project is being used for bioinformatics learning and sequence analysis; it has potential to grow into a component of larger workflows.
+This project is provides a basic workflow for aligning sequence data found in FASTA files using MAFFT and using those alignments to produce dendrograms. This project is being used for bioinformatics learning and sequence analysis; it has potential to grow into a component of larger workflows.
 
 ## Features
 -Accepts FASTA sequence data
@@ -17,7 +17,7 @@ Biopython 1.88
 MAFFT v7.525
 
 ## Usage
-In terminal, run:
+In a virtual environment in terminal, run:
 python phylogeny/source/alignment.py path/yourFASTAfile.fasta
 
 ## Acknowledgements
