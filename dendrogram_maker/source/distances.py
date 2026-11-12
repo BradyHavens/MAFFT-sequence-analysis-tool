@@ -3,7 +3,7 @@ from Bio.Align import MultipleSeqAlignment
 from Bio.Phylo.TreeConstruction import DistanceMatrix
 
 #Only accept Amino Acids
-Valid_AA = set("-ARNDCEQGHILKMFPSTWYV")
+Valid_AA = set("-ARNDCEQGHILKMFPSTWYVactg")
 
 def calculate_dist_matrix(alignment: MultipleSeqAlignment,) -> DistanceMatrix:
 	"""Calculate p-distances for alignment"""

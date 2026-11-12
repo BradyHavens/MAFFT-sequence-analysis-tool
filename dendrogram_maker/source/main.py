@@ -4,6 +4,7 @@ from pathlib import Path
 from Bio import AlignIO, Phylo
 from alignment import align_sequences
 from treemaker import build_dendrogram
+from bootstrap import bootstrap
 
 def main():
 	parser = argparse.ArgumentParser( description = "Align sequences and construct a dendrogram")
@@ -28,6 +29,7 @@ def main():
 	tree = build_dendrogram(alignment)
 
 	Phylo.write(tree, "results/tree.nwk", "newick")
+	bootstrap(str(aligned_file))
 
 	#Show file saves
 	print("Dendogram saved to results/tree.nwk")
